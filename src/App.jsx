@@ -80,16 +80,17 @@ const App = ({ modeToggleFunc, modeToggle }) => {
         <Suspense fallback={<SuspenseLoader />}>
           <ShowCode />
         </Suspense>
+       
       ),
     },
     {
       path: "/add",
       element: <AddButton />,
     },
-    // {
-    //   path: "/login",
-    //   element: <Login />,
-    // },
+    {
+      path: "/login",
+      element: <Login />,
+    },
     {
       path: "/user/:userId",
       element: <UserProfile modeToggle={toggleMode} />,
@@ -118,9 +119,9 @@ const App = ({ modeToggleFunc, modeToggle }) => {
   return (
     <>
       {loading ? (
-        <Loader />
+        <Loader   />
       ) : (
-        <div className={`${toggleMode ? "dark" : "light"}`}>
+        <div className={`${toggleMode ? "dark" : "light"}`} >
           <Navbar modeToggle={toggleMode} modeToggleFunc={setToggleMode} />
           <Routes>
             {routes.map((route, index) => (

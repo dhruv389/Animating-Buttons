@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   gap: 50px;
+
   /* background-image: linear-gradient(to bottom, #000, #2eb5d2); */
 }
 .text {
